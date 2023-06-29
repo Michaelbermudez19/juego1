@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    
+</head>
+<body>
+    <div class="barras">
+        <label for="file">JUGADOR 1</label>
+        <progress class="progres1" id="barra1" max="100" value="100"></progress>
+        <div class="barra2">
+            <progress class="progres2" id="barra2" max="100" value="100"></progress>
+            <label for="file2">JUGADOR 2</label>  
+        </div>
+    </div>
+    
+<div id="game" class="juego">
+    <h1>Juego de Ataque y Defensa</h1>
+        
+    <div id="player1" class="player-turn">
+            <h2>HORA DE ATACAR</h2>
+            <!-- botones de ataque -->
+            <img src="imagenes/espada_fuego.png" width="350px" height="200px" onclick="ataqueEnemigo(0,'ataque agua')">ataque agua</img>
+            <img src="imagenes/espada_agua.png" width="350px" height="200px" onclick="ataqueEnemigo(1,'ataque fuego')">ataque fuego</img>
+            <img src="imagenes/espada_trueno.png" width="350px" height="200px" onclick="ataqueEnemigo(2,'ataque electrico')">ataque electrico</img>
+            <!-- <button onclick="cambiarTurno()">Cambiar Turno</button> -->
+        </div>
+    
+        <div id="player2" class="player-turn" style="display:none;">
+            <h2>DEFIENDETE</h2>
+            <!-- botones de escudo -->
+            <img src="imagenes/escudo_agua.png" width="350px" height="200px" onclick="usarescudo(0,'escudo agua')">escudo agua</img>
+            <img src="imagenes/escudo_fuego.png" width="350px" height="200px" onclick="usarescudo(1,'escudo fuego')">escudo fuego</img>
+            <img src="imagenes/escudo_trueno.png" width="350px" height="200px" onclick="usarescudo(2,'escudo electrico')">escudo electrico</img>
+            <!-- <button onclick="cambiarTurno()">Cambiar Turno</button> -->
+        </div>
+    
+        <!-- boton de Inicio -->
+        <div class="botoninicio">
+        <a href="index.html">
+            <br><br><br><br><br><br><br><br>
+        <button class="button-2">Inicio</button>
+        </div>
+        <section class="caja-mensaje">
+            <div class="mensaje-caja" id="messageContainer">Mensaje</div>
+        </section>
+    <script src="juego.js"></script>
+</body>
+
+</html>
